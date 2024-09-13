@@ -4,6 +4,8 @@ public class Ex4문자literal {
 
 	public static void main(String[] args) {
 		// char : 2byte
+		String line;
+		// String line = null; // null은 레퍼런스 변수에만 줄 수 있음.
 		char a = 'W';
 		char b = '글';
 		//String b1 = '글';
@@ -14,6 +16,8 @@ public class Ex4문자literal {
 		// '1' --> 정수 1로 변경
 		//'1' --> asciicode 49 '2' --> 50, '0' --> 48
 		int num=d-48; //int num=d-'0';
+		
+		System.out.println(line);
 		System.out.println("a: "+a);
 		System.out.println("b: "+b);
 		System.out.println("c: "+c);
