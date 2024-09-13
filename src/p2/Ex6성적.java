@@ -14,7 +14,7 @@ public class Ex6성적 {
 			System.out.print("이름? ");
 			String name = sc.nextLine();
 			
-			if (name == "") break; // while 탈출
+			if(name.equals("") == true) break;
 			
 			System.out.print("시험지 유형? ");
 			String ty = tc.next();
@@ -26,13 +26,15 @@ public class Ex6성적 {
 			
 			// 출력
 			System.out.println(line);
-			System.out.printf("이름 : %s\t시험지유형 : %s\n", name, ty);
+			System.out.printf("이름 : %s\t시험지유형 : %s\n", name, ty.toUpperCase());
+			//문자열.toLowerCase()
 			System.out.printf("국어 : %3d\t영어 : %3d\n", kor, eng);
 			System.out.printf("총점 : %3d\t평균 : %5.1f\n", tot, ave);
 		}
 		
 		sc.close();
 		tc.close();
+		
+		System.out.println("종료");
 	}
-
 }
