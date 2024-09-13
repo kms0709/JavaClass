@@ -1,6 +1,6 @@
 package p3;
 
-public class Ex1_정쉬literal {
+public class Ex1_정수_literal {
 
 	public static void main(String[] args) {
 		int n = 15;
