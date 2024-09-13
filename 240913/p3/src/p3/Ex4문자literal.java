@@ -17,7 +17,7 @@ public class Ex4문자literal {
 		//'1' --> asciicode 49 '2' --> 50, '0' --> 48
 		int num=d-48; //int num=d-'0';
 		
-		System.out.println(line);
+		//System.out.println(line);
 		System.out.println("a: "+a);
 		System.out.println("b: "+b);
 		System.out.println("c: "+c);
