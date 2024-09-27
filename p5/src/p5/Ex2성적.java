@@ -50,7 +50,7 @@ public class Ex2성적 {
 			System.out.println("ch : "+ch);
 			}
 			while( ch.equals("y") == false	);
-			//"y"
+			//"y".
 			
 			//break;
 		} // while (true)
