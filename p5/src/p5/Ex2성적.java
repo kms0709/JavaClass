@@ -43,13 +43,15 @@ public class Ex2성적 {
 			System.out.printf("이름 : %s\n", name);
 			System.out.printf("평균 : %5.1f\t평가 : %c\n", ave, grade);
 			
-			System.out.println("계속하시겠어요(Y/y/N/n)? ");
+			System.out.println("\t계속하시겠어요(Y/y/N/n)? ");
 			
-			break;
+			String ch = tc.next();
+			
+			//break;
 		} // while (true)
 		
-		tc.close();
-		sc.close();
+		//tc.close();
+		//sc.close();
 	}
 
 }
