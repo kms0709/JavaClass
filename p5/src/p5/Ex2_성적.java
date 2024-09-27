@@ -1,14 +1,8 @@
 package p5;
+
 import java.util.Scanner;
-/* 이름? 홍 길 동
- * 국어, 영어?? 95 100
- * ------------------------
- * 이름 : xxx
- * 평균 : xxx.x	평가 : x
- * 	계속하시겠어요(Y/y/N/n)? n
- * 작업을 종료합니다.
- * */
-public class Ex2성적 {
+
+public class Ex2_성적 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -48,8 +42,8 @@ public class Ex2성적 {
 			
 			ch = tc.next().toLowerCase();//	"Y".toLowerCase()--> "y"
 			//System.out.println("ch : "+ch);
-			}while( ch.equals("y")  && !ch.equals("n"));
-			//}while( ch.equals("y") == false && ch.equals("n") == false);
+			}while( !(ch.equals("y")  || !ch.equals("n")) );
+			
 			//"y", "n"
 			if(ch.equals("n"))break;
 			
@@ -59,6 +53,7 @@ public class Ex2성적 {
 		System.out.println("작업을 종료합니다.");
 		tc.close();
 		sc.close();
+
 	}
 
 }
