@@ -50,12 +50,14 @@ public class Ex2성적 {
 			//System.out.println("ch : "+ch);
 			}while( ch.equals("y") == false && ch.equals("n") == false);
 			//"y", "n"
+			if(ch.equals("n"))break;
 			
 			//break;
 		} // while (true)
 		
-		//tc.close();
-		//sc.close();
+		System.out.println("작업을 종료합니다.");
+		tc.close();
+		sc.close();
 	}
 
 }
