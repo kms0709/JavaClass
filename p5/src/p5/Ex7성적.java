@@ -40,7 +40,7 @@ public class Ex7성적 {
 		
 		System.out.println("\t*성적결과*");
 		System.out.println("이름\t국어\t영어");
-		
+		//
 		for(int i = 0 ; i < SI ; i++)
 		{
 			System.out.printf("%s\t%3d\t%3d\n",name[i],kor[i],eng[i]);
