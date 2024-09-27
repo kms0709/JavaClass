@@ -44,8 +44,11 @@ public class Ex2성적 {
 			System.out.printf("평균 : %5.1f\t평가 : %c\n", ave, grade);
 			
 			System.out.println("\t계속하시겠어요(Y/y/N/n)? ");
+			Dasi:
+			String ch = tc.next().toLowerCase();//	"Y".toLowerCase()--> "y"
+			System.out.println("ch : "+ch);
+			if( ch.equals("y")==false	) goto Dasi;
 			
-			String ch = tc.next();
 			
 			//break;
 		} // while (true)
