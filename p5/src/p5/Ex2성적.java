@@ -42,15 +42,14 @@ public class Ex2성적 {
 			System.out.println(line);
 			System.out.printf("이름 : %s\n", name);
 			System.out.printf("평균 : %5.1f\t평가 : %c\n", ave, grade);
-			String ch =NULL;
+			String ch =null;
 			do {
 			System.out.println("\t계속하시겠어요(Y/y/N/n)? ");
 			
-			String ch = tc.next().toLowerCase();//	"Y".toLowerCase()--> "y"
-			System.out.println("ch : "+ch);
-			}
-			while( ch.equals("y") == false	);
-			//"y".
+			ch = tc.next().toLowerCase();//	"Y".toLowerCase()--> "y"
+			//System.out.println("ch : "+ch);
+			}while( ch.equals("y") == false && ch.equals("n") == false);
+			//"y", "n"
 			
 			//break;
 		} // while (true)
