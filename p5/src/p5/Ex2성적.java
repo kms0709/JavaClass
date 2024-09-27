@@ -14,26 +14,39 @@ public class Ex2성적 {
 		Scanner sc = new Scanner(System.in);
 		Scanner tc = new Scanner(System.in);
 		String line = "-----------------------------";
+		char grade = '@';
 		
-		// 사용자 입력
-		System.out.print("이름? ");
-		String name = sc.nextLine(); // 이름
-		
-		System.out.print("국어, 영어?? ");
-		int kor = tc.nextInt(); // 국어
-		int eng = tc.nextInt(); // 영어
-		
-		// 평균 계산
-		float ave = (float)(kor + eng) / 2; // 평균 계산
-		
-		// 평가 계싼
-		
-		
-		// 화면 출력
-		System.out.println(line);
-		System.out.printf("이름 : %s\n", name);
-		System.out.printf("평균 : %5.1f\t평가 : x\n", ave);
-		System.out.println("계속하시겠어요(Y/y/N/n)? ");
+		while (true)
+		{
+			// 사용자 입력
+			System.out.print("이름? ");
+			String name = sc.nextLine(); // 이름
+			
+			System.out.print("국어, 영어?? ");
+			int kor = tc.nextInt(); // 국어
+			int eng = tc.nextInt(); // 영어
+			
+			// 계산
+			float ave = (float)(kor + eng) / 2; // 평균 계산
+			switch ((int)ave / 10) // 평가 계산
+			{
+			case 10:
+			case 9: grade = 'A'; break;
+			case 8: grade = 'B'; break;
+			case 7: grade = 'C'; break;
+			case 6: grade = 'D'; break;
+			default: grade = 'F'; break;
+			}
+			
+			// 화면 출력
+			System.out.println(line);
+			System.out.printf("이름 : %s\n", name);
+			System.out.printf("평균 : %5.1f\t평가 : %c\n", ave, grade);
+			
+			System.out.println("계속하시겠어요(Y/y/N/n)? ");
+			
+			break;
+		} // while (true)
 		
 		tc.close();
 		sc.close();
