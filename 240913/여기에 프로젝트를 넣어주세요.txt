@@ -1,6 +1,0 @@
-폴더 및 파일 목록
-(폴더).settings
-(폴더)bin
-(폴더)src
-(파일).classpath
-(파일).project
