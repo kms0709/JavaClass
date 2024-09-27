@@ -48,7 +48,7 @@ public class Ex2_성적 {
 			if(ch.equals("n"))break;
 			
 			//break;
-		} // while (true)
+		} // while (true).
 		
 		System.out.println("작업을 종료합니다.");
 		tc.close();
