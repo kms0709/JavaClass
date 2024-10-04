@@ -6,6 +6,7 @@ class Sinsang{
 	private double weight;
 	
 	public Sinsang(){ System.out.println("인수없는 생성자call~"); }
+	// 자바는 디폴트 매개변수값을 사용할 수 없다.
 	public Sinsang(String _name, int _age, double _weight) {
 		name = _name;
 		age = _age;
