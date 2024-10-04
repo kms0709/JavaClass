@@ -13,8 +13,8 @@ class Circle {
 	}
 	
 	public int getRadius() { return radius; }
-	public float getArea() { return (float)radius * radius; }
-	public float getCircumference() { return (float)radius * 2.0f; }
+	public float getArea() { return (float)radius * radius * 3.14159f; }
+	public float getCircumference() { return (float)radius * 2.0f * 3.14159f; }
 }
 
 public class Ex6원 {
