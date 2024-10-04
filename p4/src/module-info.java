@@ -4,5 +4,6 @@
 /**
  * 
  */
-module p4 {
+class Mahajan{
+  System.out.println("Hello");
 }
