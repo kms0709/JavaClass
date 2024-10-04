@@ -5,7 +5,13 @@ class Sinsang{
 	private int age;
 	private double weight;
 	
-	public Sinsang(){ System.out.println("생성자call~"); }
+	public Sinsang(){ System.out.println("인수없는 생성자call~"); }
+	public Sinsang(String _name, int _age, double _weight) {
+		name = _name;
+		age = _age;
+		weight = _weight;
+		System.out.println("인수있는 생성자call~");
+	}
 	public void setData(String _name,int _age,double _weight) {
 		name = _name;
 		age = _age;
