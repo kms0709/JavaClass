@@ -20,7 +20,7 @@ class Circle {
 public class Ex6원 {
 
 	public static void main(String[] args) {
-		System.out.println("Math.PI : " + Math.PI);
+		//System.out.println("Math.PI : " + Math.PI);
 		Circle cir = new Circle(5);
 		System.out.printf("반지름 : %d\n", cir.getRadius());
 		System.out.printf("원의 넓이 : %.4f\n", cir.getArea());
