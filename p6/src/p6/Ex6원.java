@@ -14,7 +14,7 @@ class Circle {
 	
 	public int getRadius() { return radius; }
 	public double getArea() { return radius * radius * Math.PI; }
-	public double getCircumference() { return (float)radius * 2.0f * Math.PI; }
+	public double getCircumference() { return 2.0 * radius * Math.PI; }
 }
 
 public class Ex6원 {
