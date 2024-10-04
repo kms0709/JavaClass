@@ -13,5 +13,7 @@ public class ForeachEx {
 		String f[] = { "사과", "배", "바나나", "체리", "딸기", "포도" } ;
 		for(String s : f) // s는 f[0], f[1], ..., f[5]로 반복
 			System.out.print(s + " ");
+		
 		}
+	
 }
