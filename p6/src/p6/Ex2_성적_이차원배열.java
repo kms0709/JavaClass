@@ -61,6 +61,7 @@ public class Ex2_성적_이차원배열 {
 			} // for i
 		}
 		*/
+		}
 		System.out.println("\t*성적결과*");
 		System.out.println("이름\t국어\t영어\t총점\t평군\t평가\t등수");
 		
@@ -79,4 +80,4 @@ public class Ex2_성적_이차원배열 {
 	}
 
 }
-}
+
