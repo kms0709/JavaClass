@@ -50,23 +50,23 @@ public class Ex2_성적_이차원배열 {
 			}
 			
 			
-			/*for(int k=0; k < tot.length; k++) // i가 기준
+			for(int k=0; k < SI; k++) // i가 기준
 			{
-				rn[k]=1; // 비교전 1등
-				for(int j = 1; j < tot.length; j++)
+				a[k][3]=1; // 비교전 1등
+				for(int j = 0; j < SI; j++)
 				{
 					//if(i==j) continue;
-					if(tot[k] < tot[j]) rn[k]++;
+					if(a[k][2] < a[j][2]) a[k][3]++;
 				} // for j
 			} // for i
-		}
-		*/
+		
+		
 		}
 		System.out.println("\t*성적결과*");
 		System.out.println("이름\t국어\t영어\t총점\t평군\t평가\t등수");
 		
 		for(int i=0;i<SI;i++){
-			System.out.printf("%s\t%",name[i]);
+			System.out.printf("%s\t",name[i]);
 			for(int j=0;j<a[i].length-1 ;j++) {
 				System.out.printf("3d\t",a[i][j]);
 					
