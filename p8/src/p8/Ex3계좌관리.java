@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Ex3계좌관리
 {
-	static Account p[] = new Account[10];
+	static Account p[] = new Account[10]; //전역의 객체배열 생성
+	static int inx = 0;
 	static Scanner sc=new Scanner(System.in);
 	static Scanner tc=new Scanner(System.in);
 	
@@ -28,8 +29,23 @@ public class Ex3계좌관리
 		String cusName = tc.nextLine();
 		System.out.print("개설금액?");
 		long money = sc.nextLong();
+		p[inx] = new Account(accid,cusName,money);
+		//p[inx].show();
+		//System.out.println("inx : " + inx);
+		inx++;
 		System.out.println("#계좌개설 작업완료");
-		p[0] = new Account(accid,cusName,money);
+	}
+	
+	static void allInq()
+	{
+		System.out.println("#전체 계좌조회 작업입니다.");
+		
+		for(int i = 0; i < p.length , i++)
+		{
+			p[i].show();
+		}
+		
+		System.out.println("#전체 계좌조회 작업입니다.");
 	}
 	
 	public static void main(String[] args)

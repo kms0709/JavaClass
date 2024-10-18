@@ -14,4 +14,10 @@ public class Account {
 		
 		System.out.println("생성자\n");
 	}
+	
+	public void show()
+	{
+		System.out.printf("계좌번호 : %s\t고객명 : %s\t잔액 : %d\n",
+				accid , cusName , balance);
+	}
 }
