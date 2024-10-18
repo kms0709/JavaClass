@@ -40,7 +40,7 @@ public class Ex3계좌관리
 	{
 		System.out.println("#전체 계좌조회 작업입니다.");
 		
-		for(int i = 0; i < p.length , i++)
+		for(int i = 0; i < inx; i++)
 		{
 			p[i].show();
 		}
@@ -62,7 +62,7 @@ public class Ex3계좌관리
 				//case 2:deposit();break;
 				//case 3:withdraw();break;
 				//case 4:oneInq();break;
-				//case 5:allInq();break;
+				case 5:allInq();break;
 				default:
 					{
 						System.out.println("작업을 종료합니다.");
