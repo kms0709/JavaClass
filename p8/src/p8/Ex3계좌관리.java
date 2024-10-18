@@ -23,9 +23,27 @@ public class Ex3계좌관리
 	static void makeAccid()
 	{
 		System.out.println("#계좌개설 작업입니다.");
-		System.out.print("계좌번호? ");
-		String accid = tc.nextLine();
-		// 중복계좌 체크
+		String accid = null;
+		boolean sw; // 중복계좌 체크전 초기치
+		do
+		{
+			sw = false;
+			System.out.print("계좌번호? ");
+			accid = tc.nextLine();
+			
+			// 중복계좌 체크
+			for (int i = 0; i < inx; i++)
+			{
+				if (p[i].getAccid().equals(accid))
+				{
+					sw = true;
+					System.out.print("\t중복계좌임... 다시 ");
+					break;
+				}
+			} // for
+		}
+		while (sw);
+		
 		System.out.print("고객명? ");
 		String cusName = tc.nextLine();
 		System.out.print("개설금액?");
