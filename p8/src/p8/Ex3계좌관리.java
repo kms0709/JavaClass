@@ -40,9 +40,16 @@ public class Ex3계좌관리
 	{
 		System.out.println("#전체 계좌조회 작업입니다.");
 		
-		for(int i = 0; i < inx; i++)
+		if(inx == 0)
 		{
-			p[i].show();
+			System.out.println("\t개설계좌 X....");
+		}
+		else
+		{
+			for(int i = 0; i < inx; i++)
+			{
+				p[i].show();
+			}
 		}
 		
 		System.out.println("#전체 계좌조회 작업입니다.");
@@ -50,7 +57,6 @@ public class Ex3계좌관리
 	
 	public static void main(String[] args)
 	{
-
 		while(true)
 		{
 			menu();
