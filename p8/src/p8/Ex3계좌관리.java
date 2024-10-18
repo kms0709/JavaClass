@@ -25,6 +25,7 @@ public class Ex3계좌관리
 		System.out.println("#계좌개설 작업입니다.");
 		System.out.print("계좌번호? ");
 		String accid = tc.nextLine();
+		// 중복계좌 체크
 		System.out.print("고객명? ");
 		String cusName = tc.nextLine();
 		System.out.print("개설금액?");
@@ -52,7 +53,40 @@ public class Ex3계좌관리
 			}
 		}
 		
-		System.out.println("#전체 계좌조회 작업입니다.");
+		System.out.println("#전체 계좌조회 작업완료.\n");
+	}
+	
+	static void oneInq()
+	{
+		System.out.println("#계좌조회 작업입니다.");
+		
+		if (inx == 0)
+		{
+			System.out.println("\t개설계좌는 X...#계좌조회 작업불가!");
+			return; // 함수의 호출위치로 복귀!
+		}
+		
+		System.out.print("조회 계좌번호? ");
+		String accid = tc.nextLine();
+		int i = 0;
+		boolean sw = false; // 찾기전 초기치 설정
+		for (i = 0; i < inx; i++)
+		{
+			if (p[i].getAccid().equals(accid) == true)
+			{
+				sw = true;
+				break;
+			}
+		}
+		
+		if (!sw)
+		{
+			System.out.println("\t조회계좌는 존재하지 X...#계좌조회 작업완료.\n");
+			return;
+		}
+		else
+			p[i].show();			
+		System.out.println("#계좌조회 작업완료.\n");
 	}
 	
 	public static void main(String[] args)
@@ -67,7 +101,7 @@ public class Ex3계좌관리
 				case 1:makeAccid();break;
 				//case 2:deposit();break;
 				//case 3:withdraw();break;
-				//case 4:oneInq();break;
+				case 4:oneInq();break;
 				case 5:allInq();break;
 				default:
 					{

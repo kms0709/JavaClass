@@ -6,6 +6,8 @@ public class Account {
 	private String cusName; //고객명
 	private long balance; //잔액
 	
+	public String getAccid() { return accid; }
+	
 	public Account(String _accid, String _cusName , long _money)
 	{
 		accid = _accid;
