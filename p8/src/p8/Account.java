@@ -7,6 +7,7 @@ public class Account {
 	private long balance; //잔액
 	
 	public String getAccid() { return accid; }
+	public void plusMoney(long _money) { balance += _money; }
 	
 	public Account(String _accid, String _cusName , long _money)
 	{

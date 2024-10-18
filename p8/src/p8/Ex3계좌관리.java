@@ -90,7 +90,7 @@ public class Ex3계좌관리
 		boolean sw = false; // 찾기전 초기치 설정
 		for (i = 0; i < inx; i++)
 		{
-			if (p[i].getAccid().equals(accid) == true)
+			if (p[i].getAccid().equals(accid))
 			{
 				sw = true;
 				break;
@@ -107,6 +107,41 @@ public class Ex3계좌관리
 		System.out.println("#계좌조회 작업완료.\n");
 	}
 	
+	static void deposit()
+	{
+		System.out.println("#입금 작업입니다.");
+		
+		if (inx == 0)
+		{
+			System.out.println("\t개설계좌는 존재하지 X...#입금 작업불가!\n");
+			return;
+		}
+		
+		System.out.print("\t입금 계좌번호? ");
+		String accid = tc.nextLine();
+		System.out.print("\t      입금액? ");
+		long money = sc.nextLong();
+		
+		// 계좌 찾기
+		int i;
+		boolean sw = false; // 찾기전 초기치 설정
+		for (i = 0; i < inx; i++)
+		{
+			if (p[i].getAccid().equals(accid))
+			{
+				sw = true;
+				break;
+			}
+		}
+		
+		if (sw) // 입금계좌가 있을때
+			p[i].plusMoney(money);
+		else // 입금계좌가 없을때
+			System.out.println("\t입력한 입금계좌는 존재하지 X...#입금 작업불가!\n");
+		
+		System.out.println("#입금 작업완료.\n");
+	}
+	
 	public static void main(String[] args)
 	{
 		while(true)
@@ -117,7 +152,7 @@ public class Ex3계좌관리
 			switch(jobNo)
 			{
 				case 1:makeAccid();break;
-				//case 2:deposit();break;
+				case 2:deposit();break;
 				//case 3:withdraw();break;
 				case 4:oneInq();break;
 				case 5:allInq();break;
