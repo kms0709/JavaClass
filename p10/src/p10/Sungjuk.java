@@ -8,6 +8,7 @@ public class Sungjuk {
 	private float avg;
 	private char grade;
 	private int rn;
+	public int getHno(){return hno;}
 	
 	public Sungjuk(int hno, String name, int kor, int eng) {
 		this.hno = hno; // 멤버변수 = 매개변수;

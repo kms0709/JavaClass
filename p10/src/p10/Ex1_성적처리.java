@@ -20,11 +20,21 @@ public class Ex1_성적처리 {
 	
 	static void baseInput() {
 		System.out.println("#기본data 입력 작업입니다.");
-		
+		boolean sw;
 		// 사용자 입력
+		do { 
 		System.out.print("번호? ");
 		int hno = sc.nextInt();
-		
+		sw = false;//중복번호 체크
+		for(int i=0;i<inx;i++)
+		{
+			if(p[i].getHno() == hno ) {
+				sw=true;
+				System.out.print("\t중복번호임... 다시");
+				break;
+			}
+		}
+		}while(sw);
 		System.out.print("이름? ");
 		String name = tc.nextLine();
 		
