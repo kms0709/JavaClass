@@ -54,7 +54,14 @@ public class Ex1_성적처리 {
 	}
 	static void rank(){
 		//등수구하기
-		
+		int soon;
+		for(int i=0;i<=inx;i++) {//i를 기준
+			soon=1;//비교전 1등
+			for(int j=0;j<=inx;j++) {//j가 비교대상
+				if(p[i].getTot() <	p[j].getTot()) soon++;//3 <	200
+			}
+			p[i].setRn(soon);
+		}
 	}
 	
 	static void baseOutput() {
