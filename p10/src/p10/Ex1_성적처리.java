@@ -6,6 +6,7 @@ public class Ex1_성적처리 {
 	static Scanner sc = new Scanner(System.in); // 숫자
 	static Scanner tc = new Scanner(System.in); // 문자열
 	static Sungjuk p[] = new Sungjuk[10];
+	static int inx = 0;
 	
 	static void menu() {
 		System.out.println("\n  -- 메뉴 --");
@@ -32,10 +33,24 @@ public class Ex1_성적처리 {
 		int eng = sc.nextInt();
 		
 		// 컨테이너 생성
-		p[0] = new Sungjuk(hno, name, kor, eng);
-		p[0].disp();
+		p[inx] = new Sungjuk(hno, name, kor, eng);
+		//p[0].disp();
+		// p0, p1, p2 3개 만듬 => inx = 3
+		inx++;
 		
 		System.out.println("#기본data 입력 작업완료.");
+	}
+	
+	static void baseOutput() {
+		System.out.println("#기본data 출력 작업입니다.");
+		
+		// 출력
+		System.out.println("번호\t이름\t국어\t영어");
+		for (int i = 0; i < inx; i++) {
+			p[i].disp();
+		}
+		
+		System.out.println("#기본data 출력 작업완료.");
 	}
 	
 	public static void main(String[] args) {
