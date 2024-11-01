@@ -46,7 +46,7 @@ public class Ex1_성적처리 {
 		
 		// 예외처리
 		if (inx == 0) {
-			System.out.println("\t생석객체X...#기본data 출력 작업불가!");
+			System.out.println("\t생석객체X...#기본data 출력 작업불가!!");
 			return; // main() 으로 복귀
 		}
 		
