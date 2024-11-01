@@ -9,6 +9,7 @@ public class Sungjuk {
 	private char grade;
 	private int rn;
 	public void setRn(int soon) {rn=soon;}
+	public int getRn() { return rn; }
 	public int getTot() { return tot; }
 	public int getHno() { return hno; }
 	

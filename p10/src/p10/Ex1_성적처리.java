@@ -129,7 +129,14 @@ public class Ex1_성적처리 {
 			return;//함수 호출위치로 복귀
 		}
 		//등수로 정렬하기
-		
+		for(int i=0;) {//i가 기준
+			for(int j=i+1;j<inx;j++) {//j가 비교대상
+				if(p[i].getRn() > p[j].getRn() )//3 >	1
+				{//바꾸기
+					
+				}
+			}
+		}
 		System.out.println("번호\t이름\t국어\t영어\t총점\t  평균\t평가\t등수");
 		for(int i=0;i<inx;i++) {
 			p[i].disp1();
