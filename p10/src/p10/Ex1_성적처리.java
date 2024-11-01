@@ -83,7 +83,17 @@ public class Ex1_성적처리 {
 		System.out.println("#기본data 출력 작업완료.");
 	}
 	static void scoreReport() {
-		
+		System.out.println("#성적표 출력 작업입니다.");
+		if(inx==0) {
+			System.out.println("\t생성객체X...#성적표 출력작업불가!\n");
+			return;//함수의 호출위치로 복귀
+		}
+		System.out.println("번호\t이름\t국어\t영어\t총점\t  평균\t평가\n");
+		for(int i=0;i<inx;i++) {
+			p[i].disp1();
+			p[i].disp2();
+		}
+		System.out.println("#성적표 출력 작업완료.\n");
 	}
 	
 	public static void main(String[] args) {
