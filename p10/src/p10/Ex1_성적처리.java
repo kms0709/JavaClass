@@ -44,7 +44,13 @@ public class Ex1_성적처리 {
 	static void baseOutput() {
 		System.out.println("#기본data 출력 작업입니다.");
 		
-		// 출력
+		// 예외처리
+		if (inx == 0) {
+			System.out.println("\t생석객체X...#기본data 출력 작업불가!");
+			return; // main() 으로 복귀
+		}
+		
+		// 컨테이너 정보 출력
 		System.out.println("번호\t이름\t국어\t영어");
 		for (int i = 0; i < inx; i++) {
 			p[i].disp();
@@ -62,7 +68,7 @@ public class Ex1_성적처리 {
 			
 			switch (jobNo) {
 			case 1: baseInput(); break;
-			//case 2: baseOutput(); break;
+			case 2: baseOutput(); break;
 			//case 3: scoreReport(); break;
 			//case 4: hno_Inq(); break;
 			//case 5: scoreReportSort(); break;
