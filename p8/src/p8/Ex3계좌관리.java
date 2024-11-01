@@ -134,12 +134,77 @@ public class Ex3계좌관리
 			}
 		}
 		
-		if (sw) // 입금계좌가 있을때
+		if (sw)
+		{
+			// 입금계좌가 있을때
 			p[i].plusMoney(money);
-		else // 입금계좌가 없을때
+			System.out.println("\t입금후 잔액 : " +p[i].getBalance() + "원");
+			System.out.println("#입금 작업완료.\n");
+		}
+
+		else 
+		{
+			// 입금계좌가 없을때
 			System.out.println("\t입력한 입금계좌는 존재하지 X...#입금 작업불가!\n");
+			return;
+		}
 		
-		System.out.println("#입금 작업완료.\n");
+	}
+	
+	static void withdraw()
+	{
+		System.out.println("#출금 작업입니다.");
+		
+		if (inx == 0)
+		{
+			System.out.println("\t개설계좌는 존재하지 X...#출금 작업불가!\n");
+			return;
+		}
+		
+		System.out.print("\t출금 계좌번호? ");
+		String accid = tc.nextLine();
+		System.out.print("\t      출금액? ");
+		long money = sc.nextLong();
+		
+		// 계좌 찾기
+		int i;
+		boolean sw = false; // 찾기전 초기치 설정
+		for (i = 0; i < inx; i++)
+		{
+			if (p[i].getAccid().equals(accid))
+			{
+				sw = true;
+				break;
+			}
+		}
+		
+		if (!sw) {
+		    // 출금계좌가 없을 때
+		    System.out.println("\t입력한 출금계좌는 존재하지 않습니다. #출금 작업 불가!\n");
+		    return;
+		}
+		
+		if(p[i].getBalance() == 0)
+		{
+			// 잔액이 0일때
+		    System.out.println("\t잔액이 없습니다.\n");
+		    return;
+		}
+
+		if (p[i].getBalance() < money)
+		{
+		    // 잔액이 부족할 때
+		    System.out.println("\t잔액이 부족합니다.!\n");
+		    while (p[i].getBalance() < money)
+		    {
+		        System.out.print("\t      출금액? ");
+		        money = sc.nextLong();
+		    }
+		}
+		// 출금계좌가 존재하고 잔액이 충분할 때
+		p[i].minusMoney(money);
+		System.out.println("\t출금 후 잔액 : " + p[i].getBalance() + "원");
+		System.out.println("#출금 작업 완료.\n");
 	}
 	
 	public static void main(String[] args)
@@ -153,7 +218,7 @@ public class Ex3계좌관리
 			{
 				case 1:makeAccid();break;
 				case 2:deposit();break;
-				//case 3:withdraw();break;
+				case 3:withdraw();break;
 				case 4:oneInq();break;
 				case 5:allInq();break;
 				default:

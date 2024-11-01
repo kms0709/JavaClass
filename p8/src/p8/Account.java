@@ -5,9 +5,10 @@ public class Account {
 	private String accid; //계좌번호
 	private String cusName; //고객명
 	private long balance; //잔액
-	
+	public long getBalance() { return balance; }
 	public String getAccid() { return accid; }
 	public void plusMoney(long _money) { balance += _money; }
+	public void minusMoney(long _money) { balance -= _money; }
 	
 	public Account(String _accid, String _cusName , long _money)
 	{
