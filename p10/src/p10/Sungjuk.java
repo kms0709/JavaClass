@@ -16,8 +16,23 @@ public class Sungjuk {
 		this.kor = kor;
 		this.eng = eng;
 	}
-	
-	public void disp() {
+	public void calc(){
+		tot = kor+eng;
+		avg = (float)tot/2;// avg=tot/2.0f;
+		switch((int)avg/10)//(int)97.5F -->97,97/10-->9
+		{
+		case 10:
+		case>=9:grade='A';break;		
+		case>=8:grade='B';break;
+		case>=7:grade='C';break;
+		case>=6:grade='D';break;
+		default:grade='F';break;
+		}
+	}
+	public void disp1() {
 		System.out.printf("%3d\t%s\t%3d\t%3d\n", hno, name, kor, eng);
+	}
+	public void disp2() {
+		System.out.printf("%3d\t%5.1f\t%3c\t%3d\n", tot, avg, grade, rn);
 	}
 }

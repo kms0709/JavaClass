@@ -44,11 +44,17 @@ public class Ex1_성적처리 {
 		
 		// 컨테이너 생성
 		p[inx] = new Sungjuk(hno, name, kor, eng);
+		p[inx] = new calc();
+		rank();
 		//p[0].disp();
 		// p0, p1, p2 3개 만듬 => inx = 3
 		inx++;
 		
 		System.out.println("#기본data 입력 작업완료.");
+	}
+	static void rank(){
+		//등수구하기
+		
 	}
 	
 	static void baseOutput() {
@@ -63,10 +69,14 @@ public class Ex1_성적처리 {
 		// 컨테이너 정보 출력
 		System.out.println("번호\t이름\t국어\t영어");
 		for (int i = 0; i < inx; i++) {
-			p[i].disp();
+			p[i].disp1();
+			System.out.println();
 		}
 		
 		System.out.println("#기본data 출력 작업완료.");
+	}
+	static void scoreReport() {
+		
 	}
 	
 	public static void main(String[] args) {
