@@ -88,14 +88,55 @@ public class Ex1_성적처리 {
 			System.out.println("\t생성객체X...#성적표 출력작업불가!\n");
 			return;//함수의 호출위치로 복귀
 		}
-		System.out.println("번호\t이름\t국어\t영어\t총점\t  평균\t평가\n");
+		System.out.println("번호\t이름\t국어\t영어\t총점\t  평균\t평가\t등수");
 		for(int i=0;i<inx;i++) {
 			p[i].disp1();
 			p[i].disp2();
 		}
 		System.out.println("#성적표 출력 작업완료.\n");
 	}
-	
+	static void hno_Inq() {
+		System.out.println("#번호로 조회 작업입니다.");
+		if(inx==0) {
+			System.out.println("\t생성객체X...번호로 조회 작업불가!\n");
+			return;
+		}
+		System.out.print("조회 번호?");int hno=sc.nextInt();
+		int i;
+		boolean sw=false;//찾아보기 전 초기치
+		for(int i=0;i<inx;i++) {
+			if(p[i].getHno()==hno) {
+				sw=true;
+				break;
+			}
+		}
+		if(!sw) {
+			System.out.println("\조회번호는 X...\n");
+			return;
+		}
+		else {
+			System.out.println("번호\t이름\t국어\t영어\t총점\t  평균\t평가\t등수");
+			p[i].disp1();
+			p[i].disp2();
+		}
+		System.out.println("#번호로 조회 작업완료.\n");
+		
+	}
+	static void scoreReportSort(){
+		System.out.println("성적표 출력(등수순) 작업입니다.");
+		if(if(inx==0) {
+			System.out.println("\t생성객체X...#성적표 출력(등수순) 작업불가!\n");
+			return;//함수 호출위치로 복귀
+		}
+		//등수로 정렬하기
+		
+		System.out.println("번호\t이름\t국어\t영어\t총점\t  평균\t평가\t등수");
+		for(int i=0;i<inx;i++) {
+			p[i].disp1();
+			p[i].disp2();
+		}
+		System.out.println("#성적표 출력(등수순) 작업완료.\n");
+	}
 	public static void main(String[] args) {
 		
 		while (true) {
@@ -106,9 +147,9 @@ public class Ex1_성적처리 {
 			switch (jobNo) {
 			case 1: baseInput(); break;
 			case 2: baseOutput(); break;
-			//case 3: scoreReport(); break;
-			//case 4: hno_Inq(); break;
-			//case 5: scoreReportSort(); break;
+			case 3: scoreReport(); break;
+			case 4: hno_Inq(); break;
+			case 5: scoreReportSort(); break;
 			default:
 				System.out.println("작업을 종료합니다.");
 				return;
