@@ -1,5 +1,9 @@
-package p11;
-
+package p11;/*
+--q--
+부모이름 : xxx
+자녀이름 : xxx
+자녀지능 : xxx
+*/
 public class Ex상속 {
 	
 	public static void main(String[] args) {
