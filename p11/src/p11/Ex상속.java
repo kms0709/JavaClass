@@ -9,6 +9,8 @@ public class Ex상속 {
 	public static void main(String[] args) {
 		Child p = new Child();// 파생객체 생성
 		Child q = new Child("홍 길 동","홍 아 름",129);
+		System.out.println("--p--");
+		p.show();
 		System.out.println("--q--");
 		q.show();
 	}
