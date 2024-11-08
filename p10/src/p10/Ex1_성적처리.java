@@ -134,10 +134,9 @@ public class Ex1_성적처리 {
 			case 3: scoreReport();break;
 			case 4: hno_Inq();break;
 			case 5: scoreReportSort();break;
-			default: System.out.println("작업을 종료합니다.");			       
-			         return;
+			default: System.out.println("작업을 종료합니다."); return;
 		}//switch		
 	  }//while 
 	}
 }
-//asd
+//a
