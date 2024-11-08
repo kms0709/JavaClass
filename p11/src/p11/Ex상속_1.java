@@ -29,5 +29,5 @@ class Circle extends Point{
 	}
 	
 	public int getRadius() { return radius; }
-	public double getArea() { return radius * radius* Math.PI; }
+	public double getArea() { return radius * radius * Math.PI; }
 }
