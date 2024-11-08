@@ -4,6 +4,7 @@ public class Ex1_성적처리 {
 	static Scanner sc=new Scanner(System.in);
 	static Scanner tc=new Scanner(System.in);
 	static Sungjuk p[]=new Sungjuk[10];
+	static Sungjuk won[]=new Sungjuk[10]; //입력순서 유지를 위해
 	static int inx=0;
 	static void menu(){
 		System.out.println("  -- 메뉴 --");System.out.println("1. 기본data 입력");
@@ -33,6 +34,7 @@ public class Ex1_성적처리 {
 		p[inx]=new Sungjuk(hno,name,kor,eng);
 		p[inx].calc();		//p[0].disp(); p[0],p[1], p[2]
 		rank();
+		won[inx]=p[inx];
 		inx++;//3
 		System.out.println("#기본data 입력 작업완료.");		
 	}
@@ -55,7 +57,7 @@ public class Ex1_성적처리 {
 		}
 		System.out.println("번호\t이름\t국어\t영어");
 		for(int i=0;i<inx;i++) {
-			p[i].disp1();
+			won[i].disp1();
 			System.out.println();
 		}
 		System.out.println("#기본data 출력 작업완료.\n");
@@ -68,8 +70,8 @@ public class Ex1_성적처리 {
 		}		
 		System.out.println("번호\t이름\t국어\t영어\t총점\t  평균\t평가\t등수");
 		for(int i=0;i<inx;i++) {
-			p[i].disp1();
-			p[i].disp2();
+			won[i].disp1();
+			won[i].disp2();
 		}
 		System.out.println("#성적표 출력 작업완료.\n");
 	}
