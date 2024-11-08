@@ -210,7 +210,25 @@ public class Ex계좌관리_상속 {
 	
 	public static void main(String[] args) {
 		
-
-	}
+		while(true)
+		{
+			menu();
+			System.out.print("작업선택? ");
+			int jobNo=sc.nextInt();
+			switch(jobNo)
+			{
+				case 1:makeAccid();break;
+				case 2:deposit();break;
+				case 3:withdraw();break;
+				case 4:oneInq();break;
+				case 5:allInq();break;
+				default:
+					{
+						System.out.println("작업을 종료합니다.");
+						return;
+					}
+			} // switch		
+		} // while
+	} // main
 
 }
