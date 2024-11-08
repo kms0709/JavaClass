@@ -11,21 +11,23 @@ public class Ex상속_1 {
 		System.out.println("반지름 : "+p.getRadius());
 		System.out.println("원의 넓이 : "+p.getArea());
 	}
-
+	
 }
-class Point{
+
+class Point {
 	private int x;
 	private int y;
-	public Point(int x, int y){ this.x=x; this.y=y; }
+	public Point(int x, int y) { this.x=x; this.y=y; }
 	
 	int getX() { return x; }
 	int getY() { return y; }
 }
-class Circle extends Point{
+
+class Circle extends Point {
 	private int radius;
 	public Circle(int x, int y, int radius) {
-		super(x,y);
-		this.radius=radius;
+		super(x, y);
+		this.radius = radius;
 	}
 	
 	public int getRadius() { return radius; }
