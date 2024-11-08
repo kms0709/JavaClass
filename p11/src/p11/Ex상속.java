@@ -9,6 +9,8 @@ public class Ex상속 {
 	public static void main(String[] args) {
 		Child p = new Child();// 파생객체 생성
 		Child q = new Child("홍 길 동","홍 아 름",129);
+		System.out.println("--q--");
+		q.show();
 	}
 	
 }
@@ -20,6 +22,9 @@ class Parent{
 		this.pName=pName;
 		System.out.println("부모의 인수 있는 생성자");
 	}
+	String getPName(){
+		return pName;
+	}
 }
 class Child extends Parent{
 	private String cName;
@@ -30,6 +35,12 @@ class Child extends Parent{
 		this.cName=cName;
 		this.iq=iq;
 		System.out.println("자녀의 인수있는 생성자");
+	}
+	public void show(){
+		System.out.println("부모이름 : "+getPName());
+		System.out.println("자녀이름 : "+cName);
+		System.out.println("자녀지능 : "+iq);
+		
 	}
 }/*
 파생객체 생성시 제어는 자녀생성자로 넘어간후,
