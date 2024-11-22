@@ -19,41 +19,66 @@ public class Ex5_채점표 {
 		System.out.println("기본데이터 입력 작업입니다");
 		boolean sw;int hno;
 		do {
-		System.out.print("번호?"); hno = sc.nextInt();
-		sw=false;//중복번호체크
-		for(int i=0;i<inx;i++) {
-			if(p[i].getHno() == hno) {
-				System.out.print("\t중복번호임..다시");
-				sw=true;
-				break;
-			}
-		}
+			System.out.print("번호?"); hno = sc.nextInt();
+			sw=false;//중복번호체크
+			
+			for(int i=0;i<inx;i++) {
+				if(p[i].getHno() == hno) {
+					System.out.print("\t중복번호임..다시");
+					sw=true;
+					break;
+				} // if
+			} // for
 		}while(sw);
+		
 		System.out.print("이름?"); String name=tc.nextLine();
 		
 		int sdap[]=new int[SIZE];
 		for(int i=0;i<SIZE;i++) {
 			System.out.printf(("\t#%d번?"),i+1);
 			sdap[i]=sc.nextInt();
-		}
-		p[inx]=new Chaejum(hno,name,sdap);//p[0],p[1],p[2]
-		inx++; //3
-		System.out.println("기본데이터 입력 작업완료.");
+		} // for
 		
+		p[inx]=new Chaejum(hno,name,sdap);//p[0],p[1],p[2]
+		p[inx].calc();
+		inx++; //3
+		
+		System.out.println("기본데이터 입력 작업완료.");	
 	}
+	
 	static void bOutput() {
 		System.out.println("기본데이터 입력 작업입니다");
+		
 		if (inx==0) {
 			System.out.println("\t입력자료X...#기본데이터 출력 작업불가.");
 			return;
-		}
+		} // if
+		
 		System.out.println("번호\t이름\t#1 #2 #3 #4 #5");
 		for(int i=0;i<inx;i++) {
 			p[i].showHnoName();
 			p[i].showSdap();
-		}
-		System.out.println("기본데이터 출력 작업완료.");
+		} // for
 		
+		System.out.println("기본데이터 출력 작업완료.");
+	}
+	
+	static void resultReport() {
+		System.out.println("#채점표 출력 작업입니다.");
+		
+		if (inx == 0) {
+			System.out.println("\\t입력자료X...#채점표 출력 작업불가.");
+			return;
+		}
+		
+		System.out.println("번호\t이름\t#1 #2 #3 #4 #5\t총점\t등수");
+		for (int i = 0; i <inx; i++) {
+			p[i].showHnoName();
+			p[i].showSdap();
+			p[i].showOx();
+		}
+		
+		System.out.println("#채점표 출력 작업완료.");
 	}
 
 	public static void main(String[] args) {
