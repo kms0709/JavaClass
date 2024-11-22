@@ -19,14 +19,15 @@ public class Ex5_채점표 {
 		System.out.println("기본데이터 입력 작업입니다");
 		boolean sw;int hno;
 		do {
-		System.out.print("번호?"); int hno=sc.nextInt();
+		System.out.print("번호?"); hno = sc.nextInt();
 		sw=false;//중복번호체크
 		for(int i=0;i<inx;i++) {
-			if(p[i].getHno()===hno) {
+			if(p[i].getHno() == hno) {
 				System.out.print("\t중복번호임..다시");
 				sw=true;
 				break;
 			}
+		}
 		}while(sw);
 		System.out.print("이름?"); String name=tc.nextLine();
 		
@@ -38,6 +39,7 @@ public class Ex5_채점표 {
 		p[inx]=new Chaejum(hno,name,sdap);//p[0],p[1],p[2]
 		inx++; //3
 		System.out.println("기본데이터 입력 작업완료.");
+		
 	}
 	static void bOutput() {
 		System.out.println("기본데이터 입력 작업입니다");

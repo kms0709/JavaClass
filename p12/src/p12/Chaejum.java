@@ -8,7 +8,7 @@ class StudentInf{
 		this.name=name;
 		//System.out.println("부모 인수있는 생성자\n");
 	}
-	public int getHno{return Hno};
+	public int getHno() {return hno;}
 	public void showHnoName() {
 		System.out.printf("%3d\t%s\t",hno,name);
 	}
