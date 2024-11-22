@@ -51,7 +51,11 @@ public class Chaejum extends StudentInf {
 	}
 	
 	public void showOx() {
-		
+		System.out.printf("\t\t");
+		for (int i = 0; i < ox.length; i++) {
+			System.out.printf("%2c", ox[i]);
+		} // for
+		System.out.printf("\t%3d\t%3d\n", tot, rn);
 	}
 }
 

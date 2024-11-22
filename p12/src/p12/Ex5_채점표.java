@@ -39,11 +39,17 @@ public class Ex5_채점표 {
 			sdap[i]=sc.nextInt();
 		} // for
 		
-		p[inx]=new Chaejum(hno,name,sdap);//p[0],p[1],p[2]
+		p[inx]=new Chaejum(hno,name,sdap); // p[0],p[1],p[2]
 		p[inx].calc();
+		rank();
 		inx++; //3
 		
 		System.out.println("기본데이터 입력 작업완료.");	
+	}
+	
+	static void rank() {
+		// 등수 구하기
+		
 	}
 	
 	static void bOutput() {
@@ -88,7 +94,7 @@ public class Ex5_채점표 {
 			switch(jobNo) {
 				case 1:bInput();break;
 				case 2:bOutput();break;
-				//case 3:resultReport();break;
+				case 3:resultReport();break;
 				//case 4:nameInq();break;
 				//case 5:resultReportSort();break;
 				default:System.out.println("작업을 종료합니다."); return;
