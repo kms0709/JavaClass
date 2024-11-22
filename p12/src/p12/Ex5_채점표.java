@@ -79,7 +79,7 @@ public class Ex5_채점표 {
 		System.out.println("#채점표 출력 작업입니다.");
 		
 		if (inx == 0) {
-			System.out.println("\\t입력자료X...#채점표 출력 작업불가.");
+			System.out.println("\t입력자료X...#채점표 출력 작업불가.");
 			return;
 		}
 		
@@ -97,18 +97,25 @@ public class Ex5_채점표 {
 		System.out.println("#이름으로 조회 작업입니다.");
 		
 		if (inx == 0) {
-			System.out.println("\\t입력자료X...#이름으로 조회 작업불가.");
+			System.out.println("\t입력자료X...#이름으로 조회 작업불가.");
 			return;
 		}
 		
 		System.out.print("조회 이름? ");
 		String name = tc.nextLine();
-		for (int i = 0; i < inx; i++) {
-			if (p[i].getName() == name) {
-				
+		int i;
+		for (i = 0; i < inx; i++) {
+			if (p[i].getName().compareTo(name) == 0) {
+				System.out.println("번호\t이름\t#1 #2 #3 #4 #5\t총점\t등수");
+				p[i].showHnoName();
+				p[i].showOx();
 			} // if
 		} // for
 		
+		if (i == inx) {
+			System.out.println("\t검색결과X...#이름으로 조회 작업불가.");
+			return;
+		}
 		
 		System.out.println("#이름으로 조회 작업완료.");
 	}
@@ -116,7 +123,7 @@ public class Ex5_채점표 {
 	public static void main(String[] args) {
 		while(true) {
 			menu();
-			System.out.print("작업선택?"); int jobNo=sc.nextInt();
+			System.out.print("작업선택?"); int jobNo = sc.nextInt();
 			switch(jobNo) {
 				case 1:bInput();break;
 				case 2:bOutput();break;
