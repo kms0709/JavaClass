@@ -11,6 +11,7 @@ class StudentInf {
 	}
 	
 	public int getHno() { return hno; }
+	public String getName() { return name; }
 	public void showHnoName() {
 		System.out.printf("%3d\t%s\t",hno,name);
 	}

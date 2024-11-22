@@ -96,6 +96,18 @@ public class Ex5_채점표 {
 	static void nameInq() {
 		System.out.println("#이름으로 조회 작업입니다.");
 		
+		if (inx == 0) {
+			System.out.println("\\t입력자료X...#이름으로 조회 작업불가.");
+			return;
+		}
+		
+		System.out.print("조회 이름? ");
+		String name = tc.nextLine();
+		for (int i = 0; i < inx; i++) {
+			if (p[i].getName() == name) {
+				
+			} // if
+		} // for
 		
 		
 		System.out.println("#이름으로 조회 작업완료.");
