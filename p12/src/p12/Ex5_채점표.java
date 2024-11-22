@@ -11,7 +11,7 @@ public class Ex5_채점표 {
 		System.out.println("1.기본데이터입력");
 		System.out.println("2.기본데이터출력");
 		System.out.println("3.채점표 출력");
-		System.out.println("4.번호로 조회");
+		System.out.println("4.이름으로 조회");
 		System.out.println("5.채점표 출력(등수순)");
 		System.out.println("6.작업종료");
 	}
@@ -49,7 +49,13 @@ public class Ex5_채점표 {
 	
 	static void rank() {
 		// 등수 구하기
-		
+		for (int i = 0; i < inx; i++) {
+			int soon = 1;
+			for (int j = 0; j <= inx; j++) {
+				if (p[i].getTot() < p[j].getTot()) soon++;
+			} // for (j)
+			p[i].setRn(soon);
+		} // for (i)
 	}
 	
 	static void bOutput() {
@@ -86,6 +92,14 @@ public class Ex5_채점표 {
 		
 		System.out.println("#채점표 출력 작업완료.");
 	}
+	
+	static void nameInq() {
+		System.out.println("#이름으로 조회 작업입니다.");
+		
+		
+		
+		System.out.println("#이름으로 조회 작업완료.");
+	}
 
 	public static void main(String[] args) {
 		while(true) {
@@ -95,7 +109,7 @@ public class Ex5_채점표 {
 				case 1:bInput();break;
 				case 2:bOutput();break;
 				case 3:resultReport();break;
-				//case 4:nameInq();break;
+				case 4:nameInq();break;
 				//case 5:resultReportSort();break;
 				default:System.out.println("작업을 종료합니다."); return;
 		}

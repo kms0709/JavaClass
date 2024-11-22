@@ -22,6 +22,9 @@ public class Chaejum extends StudentInf {
 	private char ox[] = new char[5];
 	private int tot;
 	private int rn;
+
+	public int getTot() { return tot; }
+	public void setRn(int soon) { rn = soon; }
 	
 	public Chaejum(int hno,String name,int sdap[]) {
 		super(hno,name);
@@ -30,7 +33,6 @@ public class Chaejum extends StudentInf {
 		} // for
 		//System.out.println("자녀 인수있는 생성자\n");
 	}
-	
 	
 	public void calc() {
 		// 채점하기
