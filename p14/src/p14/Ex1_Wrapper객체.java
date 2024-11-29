@@ -25,6 +25,12 @@ public class Ex1_Wrapper객체 {
 		System.out.println("c : " + c);
 		System.out.println("f : " + f);
 		System.out.println("b : " + b);
+		
+		Float f1 = Float.valueOf(3.14f);
+		System.out.println("f1 : " + f1);
+		
+		Float f2 = Float.valueOf( (float)3.14 );
+		System.out.println("f2 : " + f2);
 	}
 
 }
